@@ -40,7 +40,7 @@ def gen_erl_sum_MC(rates, shapez, n_samples):
             betas = 1.0/l * np.ones((n_samples,))
             S += np.random.exponential(betas)
 
-    return S
+    return S.tolist()
 
 
 def erl_sum_CDF(rates, shapez, y):
